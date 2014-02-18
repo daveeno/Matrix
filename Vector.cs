@@ -121,9 +121,9 @@ namespace MatVec
       double[] d = new double[3];
       if (_rows == 3 && _rows == v.Rows)
       {
-        d[0] = _V[1] * v.Components[2] + _V[2] * v.Components[1];
-        d[1] = _V[0] * v.Components[2] + _V[2] * v.Components[0];
-        d[2] = _V[0] * v.Components[1] + _V[1] * v.Components[0];
+        d[0] = _V[1] * v.Components[2] - _V[2] * v.Components[1];
+        d[1] = _V[2] * v.Components[0] - _V[0] * v.Components[2];
+        d[2] = _V[0] * v.Components[1] - _V[1] * v.Components[0];
       }
       return new Vector(d);
     }
